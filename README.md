@@ -11,7 +11,7 @@ Before running this script, ensure you have:
 
    For example:
    - Server: `server.yourdomain.com`
-   - Internal service: `service.yourdomain.com`
+   - Subdomain for your service: `service.yourdomain.com`
 
 2. Access to a Linux server with sudo privileges.
 
@@ -38,10 +38,19 @@ ssh yourusername@server.yourdomain.com
 
 ### 3. Download and execute the setup script
 
-Clone this repository and execute the setup script:
+Install git and clone this repository:
 
 ```bash
-sudo apt install git -y && rm -rf basic-server-installation && git clone https://github.com/yourusername/basic-server-installation.git && cd basic-server-installation && chmod +x server-setup.sh && ./server-setup.sh
+# Install git if not already installed
+sudo apt install git -y
+
+# Clone the repository
+git clone https://github.com/jpfranca-br/basic-server-installation.git
+cd basic-server-installation
+
+# Make the script executable and run it
+chmod +x server-setup.sh
+./server-setup.sh
 ```
 
 ### 4. Enter the required data
